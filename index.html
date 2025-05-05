@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mistriz - Home</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #E0D5BE;
+      margin: 0;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease;
+    }
+
+    header {
+      background-color: #033556;
+      color: #F0EBE0;
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      text-align: left;
+    }
+
+    .header-logo {
+      max-height: 80px;
+      width: auto;
+      border-radius: 10px;
+      filter: drop-shadow(0 0 10px #EF9135);
+    }
+
+    .header-text h1 {
+      font-size: 32px;
+      margin: 0 0 10px;
+    }
+
+    .header-text p {
+      margin: 0;
+      font-size: 18px;
+      color: #F0EBE0;
+    }
+
+    h2 {
+      margin: 20px 0 10px;
+      font-size: 28px;
+      color: #033556;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+      padding: 0 10px;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .service a {
+      background: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(3, 53, 86, 0.1);
+      width: 200px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #033556;
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      animation: bounce 1s infinite;
+    }
+
+    .service a:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 5px 15px rgba(3, 53, 86, 0.2);
+      background-color: #EF9135;
+      color: #fff;
+    }
+
+    .service:nth-child(2) a { animation-delay: 0.2s; }
+    .service:nth-child(3) a { animation-delay: 0.4s; }
+
+    .service-icon {
+      font-size: 50px;
+      color: #EF9135;
+      transition: color 0.3s ease;
+    }
+
+    .service h3 {
+      margin-top: 10px;
+      color: #033556;
+      transition: color 0.3s ease;
+    }
+
+    .service a:hover .service-icon,
+    .service a:hover h3 {
+      color: White;
+    }
+
+    .vision-mission {
+      background-color:  #F0EBE0;
+      padding: 40px 20px;
+      margin: 20px 0;
+    }
+
+    .vision-mission h2 {
+      margin-bottom: 10px;
+    }
+
+    .vision-mission p {
+      max-width: 600px;
+      margin: 10px auto;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #033556;
+      color: white;
+      padding: 20px;
+      animation: fadeInUp 1.8s ease-in-out;
+      margin-top: 20px;
+    }
+
+    footer .social-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #EF9135;
+    }
+
+    footer .social-media i {
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    footer .social-media a:hover i {
+      transform: scale(1.2);
+      color: #EF9135;
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service a {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .vision-mission p {
+        padding: 0 10px;
+      }
+
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-logo {
+        max-height: 60px;
+      }
+
+      .header-text h1 {
+        font-size: 24px;
+      }
+
+      .header-text p {
+        font-size: 16px;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="images/logo2.png" alt="Mistriz Logo" class="header-logo" />
+      <div class="header-text">
+        <h1>Welcome to Mistriz!</h1>
+        <p>Kaam ka scene tight? Fikr not, Mistriz hai right!</p>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <a href="electrician.html">
+          <i class="fas fa-bolt service-icon"></i>
+          <h3>Electrician</h3>
+        </a>
+      </div>
+      <div class="service">
+        <a href="mechanic.html">
+          <i class="fas fa-wrench service-icon"></i>
+          <h3>Mechanic</h3>
+        </a>
+      </div>
+      <div class="service">
+        <a href="laundry.html">
+          <i class="fas fa-tshirt service-icon"></i>
+          <h3>Laundry</h3>
+        </a>
+      </div>
+      <!-- Added Cleaner Card -->
+      <div class="service">
+        <a href="cleaner.html">
+          <i class="fas fa-broom service-icon"></i>
+          <h3>Cleaner</h3>
+        </a>
+      </div>
+      <!-- Added Plumber Card -->
+      <div class="service">
+        <a href="plumber.html">
+          <i class="fas fa-shower service-icon"></i>
+          <h3>Plumber</h3>
+        </a>
+      </div>
+    </div>
+  </section>  
+
+  <section class="vision-mission">
+    <h2>Our Vision</h2>
+    <p>To revolutionize how people access essential home and auto services through trust, technology, and reliability.</p>
+    <h2>Our Mission</h2>
+    <p>To connect customers with skilled, verified professionals for electrical, mechanical, and domestic services — anytime, anywhere.</p>
+  </section>
+
+  <section id="testimonials" style="background-color: #f9f9f9; padding: 40px 20px; text-align: center;">
+    <h2 style="font-size: 2rem; margin-bottom: 20px;">What Our Customers Say</h2>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="background: white; padding: 20px; margin: 10px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <p style="font-style: italic;">"Fast and reliable service. The electrician fixed our AC quickly!"</p>
+        <p style="font-weight: bold;">- Shoaib Bilal</p>
+      </div>
+      <div style="background: white; padding: 20px; margin: 10px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <p style="font-style: italic;">"Highly recommended! good cleaning services"</p>
+        <p style="font-weight: bold;">- Ayesha Ahmed</p>
+      </div>
+      <div style="background: white; padding: 20px; margin: 10px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <p style="font-style: italic;">"I needed urgent mechanic for bikes, so mistriz sent a pro in 30 minutes only!"</p>
+        <p style="font-weight: bold;">- Yasiin Khattak</p>
+      </div>
+    </div>
+  </section>  
+
+  <footer>
+    <p>Follow us:</p>
+    <div class="social-media">
+      <a href="https://www.instagram.com/mistriz.pk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <i class="fab fa-instagram"></i> Mistriz Instagram
+      </a>
+    </div>
+    <div class="footer" style="margin-top: 15px;">© 2025 Mistriz | All rights reserved</div>
+  </footer>
+    
+  
+</body>
+</html>
